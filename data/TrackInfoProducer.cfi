@@ -1,0 +1,10 @@
+   module trackinfo= TrackInfoProducer{
+        InputTag cosmicTracks = ctfWithMaterialTracks:
+        InputTag rechits =ctfWithMaterialTracks:
+        string forwardPredictedState="fwdPredictedState"
+        string backwardPredictedState="bwdPredictedState"
+        string updatedState="updatedState"
+        string combinedState="combinedState"
+
+        }
+
