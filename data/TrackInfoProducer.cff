@@ -1,0 +1,17 @@
+replace rsWithMaterialTracks.TrajectoryInEvent = true
+replace ctfWithMaterialTracks.TrajectoryInEvent = true
+replace cosmictrackfinder.TrajInEvents = true
+
+module  trackinfoRS = trackinfo from "AnalysisAlgos/TrackInfoProducer/data/TrackInfoProducer.cfi"
+replace trackinfoRS.cosmicTracks  = "rsWithMaterialTracks"
+replace trackinfoRS.rechits  = "rsWithMaterialTracks"
+
+module  trackinfoCTF = trackinfo from "AnalysisAlgos/TrackInfoProducer/data/TrackInfoProducer.cfi"
+replace trackinfoCTF.cosmicTracks  = "ctfWithMaterialTracks"
+replace trackinfoCTF.rechits  = "ctfWithMaterialTracks"
+
+module  trackinfoCosmicTF = trackinfo from "AnalysisAlgos/TrackInfoProducer/data/TrackInfoProducer.cfi"
+replace trackinfoCosmicTF.cosmicTracks  = "cosmictrackfinder"
+replace trackinfoCosmicTF.rechits  = "cosmictrackfinder"
+
+

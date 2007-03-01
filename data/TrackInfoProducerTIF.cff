@@ -1,0 +1,19 @@
+replace rsWithMaterialTracksTIF.TrajectoryInEvent = true
+replace ctfWithMaterialTracksTIF.TrajectoryInEvent = true
+replace cosmictrackfinderTIF.TrajInEvents = true
+
+module  trackinfoRSTIF = trackinfo from "AnalysisAlgos/TrackInfoProducer/data/TrackInfoProducer.cfi"
+replace trackinfoRSTIF.cosmicTracks  = "rsWithMaterialTracksTIF"
+replace trackinfoRSTIF.rechits  = "rsWithMaterialTracksTIF"
+
+module  trackinfoCTFTIF = trackinfo from "AnalysisAlgos/TrackInfoProducer/data/TrackInfoProducer.cfi"
+replace trackinfoCTFTIF.cosmicTracks  = "ctfWithMaterialTracksTIF"
+replace trackinfoCTFTIF.rechits  = "ctfWithMaterialTracksTIF"
+
+module  trackinfoCosmicTFTIF = trackinfo from "AnalysisAlgos/TrackInfoProducer/data/TrackInfoProducer.cfi"
+replace trackinfoCosmicTFTIF.cosmicTracks  = "cosmictrackfinderTIF"
+replace trackinfoCosmicTFTIF.rechits  = "cosmictrackfinderTIF"
+
+sequence trackinfoTIF = {trackinfoRSTIF,trackinfoCTFTIF,trackinfoCosmicTFTIF}
+
+
