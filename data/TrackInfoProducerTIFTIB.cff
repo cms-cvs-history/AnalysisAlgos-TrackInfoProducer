@@ -3,16 +3,16 @@ replace ctfWithMaterialTracksTIFTIB.TrajectoryInEvent = true
 replace cosmictrackfinderTIFTIB.TrajInEvents = true
 
 module  trackinfoRSTIFTIB = trackinfo from "AnalysisAlgos/TrackInfoProducer/data/TrackInfoProducer.cfi"
-replace trackinfoRSTIFTIB.cosmicTracks  = "rsWithMaterialTracksTIFTIB"
-replace trackinfoRSTIFTIB.rechits  = "rsWithMaterialTracksTIFTIB"
+replace trackinfoRSTIFTIB.cosmicTracks  = rsWithMaterialTracksTIFTIB
+replace trackinfoRSTIFTIB.rechits  = rsWithMaterialTracksTIFTIB
 
 module  trackinfoCTFTIFTIB = trackinfo from "AnalysisAlgos/TrackInfoProducer/data/TrackInfoProducer.cfi"
-replace trackinfoCTFTIFTIB.cosmicTracks  = "ctfWithMaterialTracksTIFTIB"
-replace trackinfoCTFTIFTIB.rechits  = "ctfWithMaterialTracksTIFTIB"
+replace trackinfoCTFTIFTIB.cosmicTracks  = ctfWithMaterialTracksTIFTIB
+replace trackinfoCTFTIFTIB.rechits  = ctfWithMaterialTracksTIFTIB
 
 module  trackinfoCosmicTFTIFTIB = trackinfo from "AnalysisAlgos/TrackInfoProducer/data/TrackInfoProducer.cfi"
-replace trackinfoCosmicTFTIFTIB.cosmicTracks  = "cosmictrackfinderTIFTIB"
-replace trackinfoCosmicTFTIFTIB.rechits  = "cosmictrackfinderTIFTIB"
+replace trackinfoCosmicTFTIFTIB.cosmicTracks  = cosmictrackfinderTIFTIB
+replace trackinfoCosmicTFTIFTIB.rechits  = cosmictrackfinderTIFTIB
 
 sequence trackinfoTIFTIB = {trackinfoRSTIFTIB,trackinfoCTFTIFTIB,trackinfoCosmicTFTIFTIB}
 
