@@ -11,11 +11,11 @@
 
 <library file=TrackInfoAnalyzer.cc name=TrackInfoAnalyzer>
   <use name=FWCore/Framework>
-  <flags SEAL_PLUGIN_NAME="TrackInfoAnalyzer">
+  <flags EDM_PLUGIN=1>
 </library>
 <library file=TrackInfoAnalyzerExample.cc name=TrackInfoAnalyzerExample>
   <use name=FWCore/Framework>
-  <flags SEAL_PLUGIN_NAME="TrackInfoAnalyzerExample">
+  <flags EDM_PLUGIN=1>
 </library>
 
 
