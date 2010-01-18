@@ -1,14 +1,11 @@
 #include <memory>
 
-#include "FWCore/Framework/interface/Frameworkfwd.h"
 #include "FWCore/Framework/interface/EDAnalyzer.h"
 
 #include "FWCore/Framework/interface/Event.h"
 #include "FWCore/Framework/interface/MakerMacros.h"
 
-#include "FWCore/Framework/interface/ESHandle.h"
 #include "FWCore/MessageLogger/interface/MessageLogger.h"
-#include "DataFormats/TrackReco/interface/TrackFwd.h"
 #include "AnalysisDataFormats/TrackInfo/interface/TrackInfo.h"
 #include "DataFormats/TrackingRecHit/interface/TrackingRecHit.h"
 //#include "DataFormats/DetId/interface/DetId.h"
@@ -24,7 +21,7 @@ using namespace edm;
 class TrackInfoAnalyzer : public edm::EDAnalyzer {
  public:
   TrackInfoAnalyzer(const edm::ParameterSet& pset) {conf_=pset;}
-  void beginJob(const edm::EventSetup& c){
+  void beginJob(){
     //       cout << "beginJob" <<endl;
     //     edm::ESHandle<TrackerGeometry> tkgeom;
     //    c.get<TrackerDigiGeometryRecord>().get( tkgeom );
